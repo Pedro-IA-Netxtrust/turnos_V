@@ -106,10 +106,14 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
       <aside className="w-64 bg-slate-900 border-r border-slate-800 flex flex-col shrink-0">
         <div className="p-6 border-b border-slate-800">
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center text-white font-bold">A</div>
-            <h1 className="text-xl font-black text-white tracking-tighter italic">ASISTENCIA<span className="text-blue-500">FAENA</span></h1>
+            <div className="w-12 h-12 shrink-0 rounded-xl overflow-hidden bg-slate-950 border border-slate-800 flex items-center justify-center">
+              <img src="/monitoring-logo.svg" alt="Monitoring Gestión de Activos" className="w-full h-full object-cover" />
+            </div>
+            <div>
+              <h1 className="text-xl font-black text-white tracking-tighter italic">ASISTENCIA<span className="text-blue-500">FAENA</span></h1>
+              <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-widest font-bold">Gestión de HH & FTE</p>
+            </div>
           </div>
-          <p className="text-[10px] text-slate-500 mt-1 uppercase tracking-widest font-bold">Gestión de HH & FTE</p>
         </div>
 
         <nav className="flex-1 p-4 space-y-2 overflow-y-auto">

@@ -1,0 +1,21 @@
+<svg viewBox="0 0 360 120" xmlns="http://www.w3.org/2000/svg" role="img" aria-labelledby="logoTitle logoDesc">
+  <title id="logoTitle">Monitoring Gestión de Activos</title>
+  <desc id="logoDesc">Logo con icono circular y texto para la aplicación de gestión de activos.</desc>
+  <defs>
+    <linearGradient id="gradCircle" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1A367C" />
+      <stop offset="100%" stop-color="#0F73C6" />
+    </linearGradient>
+    <linearGradient id="gradArrow" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F29100" />
+      <stop offset="100%" stop-color="#FFC24D" />
+    </linearGradient>
+  </defs>
+  <rect width="360" height="120" rx="16" fill="#0F172A" />
+  <circle cx="60" cy="60" r="44" fill="url(#gradCircle)" opacity="0.95" />
+  <path d="M62 22c-22 0-40 18-40 40s18 40 40 40c13 0 24-6 31-16" fill="none" stroke="url(#gradArrow)" stroke-width="8" stroke-linecap="round" />
+  <path d="M84 46l-16-16-16 16" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <path d="M46 74l16 16 16-16" fill="none" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" />
+  <text x="120" y="46" fill="#F8FAFC" font-family="Inter, sans-serif" font-size="28" font-weight="700">Monitoring</text>
+  <text x="120" y="76" fill="#94A3B8" font-family="Inter, sans-serif" font-size="12" letter-spacing="0.16em">GESTIÓN DE ACTIVOS</text>
+</svg>
