@@ -46,6 +46,7 @@ export interface Database {
           last_name: string;
           area_id: string;
           position: string | null;
+          contract_type: 'FAENA' | 'TELETRABAJO' | 'MIXTO';
           fte_percentage: number;
           is_active: boolean;
           hire_date: string | null;
@@ -59,6 +60,7 @@ export interface Database {
           last_name: string;
           area_id: string;
           position?: string | null;
+          contract_type?: 'FAENA' | 'TELETRABAJO' | 'MIXTO';
           fte_percentage?: number;
           is_active?: boolean;
           hire_date?: string | null;
@@ -71,6 +73,7 @@ export interface Database {
           last_name?: string;
           area_id?: string;
           position?: string | null;
+          contract_type?: 'FAENA' | 'TELETRABAJO' | 'MIXTO';
           fte_percentage?: number;
           is_active?: boolean;
           hire_date?: string | null;
@@ -205,9 +208,36 @@ export interface Database {
         };
         Relationships: [];
       };
+      safety_talks: {
+        Row: {
+          id: string;
+          employee_id: string;
+          talk_date: string;
+          topic: string;
+          created_by: string;
+          created_at: string;
+        };
+        Insert: {
+          id?: string;
+          employee_id: string;
+          talk_date: string;
+          topic: string;
+          created_by?: string;
+          created_at?: string;
+        };
+        Update: {
+          employee_id?: string;
+          talk_date?: string;
+          topic?: string;
+          created_by?: string;
+          created_at?: string;
+        };
+        Relationships: [];
+      };
       user_roles: {
         Row: {
           id: string;
+          auth_user_id: string;
           user_id: string;
           role: 'ADMIN' | 'SUPERVISOR' | 'VIEWER';
           area_id: string | null;
@@ -216,6 +246,7 @@ export interface Database {
         };
         Insert: {
           id?: string;
+          auth_user_id: string;
           user_id: string;
           role: 'ADMIN' | 'SUPERVISOR' | 'VIEWER';
           area_id?: string | null;
@@ -223,6 +254,7 @@ export interface Database {
           updated_at?: string;
         };
         Update: {
+          auth_user_id?: string;
           user_id?: string;
           role?: 'ADMIN' | 'SUPERVISOR' | 'VIEWER';
           area_id?: string | null;

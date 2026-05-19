@@ -21,7 +21,7 @@ export async function registerSafetyTalk(data: {
  */
 export async function getMonthlySafetyCount(year: number, month: number): Promise<number> {
   const startDate = `${year}-${String(month).padStart(2, '0')}-01`;
-  const endDate = new Date(year, month, 0).toISOString().split('T')[0];
+  const endDate = new Date(year, month, 0).toISOString().slice(0, 10);
 
   const { count, error } = await supabase
     .from('safety_talks')

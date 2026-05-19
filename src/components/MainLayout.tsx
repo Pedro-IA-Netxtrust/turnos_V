@@ -10,9 +10,10 @@ import { getActiveAreas } from '../lib/crud/areas';
 
 interface Props {
   children: React.ReactNode;
+  activePage?: string;
 }
 
-export const MainLayout: React.FC<Props> = ({ children }) => {
+export const MainLayout: React.FC<Props> = ({ children, activePage: activePageProp }) => {
   const pathname = usePathname() || '/dashboard';
   const [presentCount, setPresentCount] = useState<number | null>(null);
   const [safetyCount, setSafetyCount] = useState<number | null>(null);
@@ -30,7 +31,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
     } catch (e) {}
 
     const fetchData = async () => {
-      const today = new Date().toISOString().split('T')[0];
+      const today = new Date().toISOString().slice(0, 10);
       
       const [presentRes, safetyRes] = await Promise.all([
         supabase
@@ -98,7 +99,7 @@ export const MainLayout: React.FC<Props> = ({ children }) => {
     return 'dashboard';
   };
 
-  const activePage = getActiveId();
+  const activePage = activePageProp ?? getActiveId();
 
   return (
     <div className="flex h-screen bg-slate-950 text-slate-200 overflow-hidden">

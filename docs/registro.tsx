@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { DailyRegisterForm } from '../components/DailyRegisterForm';
-import { EmployeeSelector } from '../components/EmployeeSelector';
-import { EmployeeHistoryTable } from '../components/EmployeeHistoryTable';
-import type { EmployeeLookup } from '../lib/crud/employees';
-import { MainLayout } from '../src/components/MainLayout';
-import { SafetyTalkForm } from '../src/components/SafetyTalkForm';
+import { DailyRegisterForm } from '@/components/DailyRegisterForm';
+import { EmployeeSelector } from '@/components/EmployeeSelector';
+import { EmployeeHistoryTable } from '@/components/EmployeeHistoryTable';
+import type { EmployeeLookup } from '@/lib/crud/employees';
+import { MainLayout } from '@/components/MainLayout';
+import { SafetyTalkForm } from '@/components/SafetyTalkForm';
 
 const RegistroPage = () => {
   const [selectedEmployee, setSelectedEmployee] = useState<EmployeeLookup | null>(null);

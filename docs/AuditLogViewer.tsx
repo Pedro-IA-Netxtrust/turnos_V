@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { getAuditLogsForRecord, type AuditLogEntry } from '../lib/crud/audit';
+import { getAuditLogsForRecord, type AuditLogEntry } from '@/lib/crud/audit';
 
 interface Props {
   recordId: string;

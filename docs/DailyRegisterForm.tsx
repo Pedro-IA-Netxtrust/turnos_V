@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { saveDailyRegister } from '../lib/crud/planning';
+import { saveDailyRegister } from '@/lib/crud/planning';
 
 interface Props {
   employeeId: string;

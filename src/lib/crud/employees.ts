@@ -20,6 +20,7 @@ const employeeCreateSchema = z.object({
 const employeeUpdateSchema = employeeCreateSchema.partial();
 
 export type EmployeeRow = Database['public']['Tables']['employees']['Row'];
+export type EmployeeLookup = EmployeeRow;
 export type EmployeeInsert = Database['public']['Tables']['employees']['Insert'];
 export type EmployeeUpdate = Database['public']['Tables']['employees']['Update'];
 

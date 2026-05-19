@@ -1,4 +1,4 @@
-import { supabase } from '../supabase';
+import { supabase } from '@/lib/supabase';
 import type { Database } from '../../types/supabase';
 
 type PlanningDaily = Database['public']['Tables']['planning_daily']['Insert'];

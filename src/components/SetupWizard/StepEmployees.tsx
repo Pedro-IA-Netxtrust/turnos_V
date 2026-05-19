@@ -31,7 +31,7 @@ export default function StepEmployees({ wizardData, updateWizardData, onNext, on
       sub_area: '',
       fte_percentage: 100,
       is_group_61: false,
-      start_date: new Date().toISOString().split('T')[0],
+      start_date: new Date().toISOString().slice(0, 10),
       end_date: null,
       is_active: true,
     }]);

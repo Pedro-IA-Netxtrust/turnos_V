@@ -11,7 +11,7 @@ interface Props {
 export const SafetyTalkForm: React.FC<Props> = ({ onSuccess, employeeId: initialEmployeeId, employeeName }) => {
   const [employeeId, setEmployeeId] = useState<string | null>(initialEmployeeId || null);
   const [topic, setTopic] = useState('');
-  const [date, setDate] = useState(new Date().toISOString().split('T')[0]);
+  const [date, setDate] = useState(new Date().toISOString().slice(0, 10));
   const [loading, setLoading] = useState(false);
 
   const handleSubmit = async (e: React.FormEvent) => {

@@ -23,8 +23,8 @@ export const EmployeeHistoryTable: React.FC<Props> = ({ employeeId, refreshKey }
         
         const data = await getPlanningDailyByDateRange(
           employeeId,
-          start.toISOString().split('T')[0],
-          end.toISOString().split('T')[0]
+          start.toISOString().slice(0, 10),
+          end.toISOString().slice(0, 10)
         );
         setHistory(data.reverse()); // Más reciente primero
       } catch (error) {

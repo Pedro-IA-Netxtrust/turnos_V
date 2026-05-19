@@ -81,8 +81,9 @@ export default function RegistroPage() {
     try {
       const data = await getActiveEmployees();
       setEmployees(data);
-      if (data.length > 0 && !selectedEmployeeId) {
-        setSelectedEmployeeId(data[0].id);
+      const firstEmployee = data[0];
+      if (firstEmployee && !selectedEmployeeId) {
+        setSelectedEmployeeId(firstEmployee.id);
       }
     } catch (err) {
       setError((err as Error).message);

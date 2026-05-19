@@ -24,7 +24,7 @@ export async function getActiveResources(type?: 'CAMIONETA' | 'CASINO'): Promise
  * Obtiene asignaciones vigentes (opcional para dashboard de recursos)
  */
 export async function getCurrentAssignments() {
-  const today = new Date().toISOString().split('T')[0];
+  const today = new Date().toISOString().slice(0, 10);
   const { data, error } = await supabase
     .from('resource_assignments')
     .select('*, resources(code, name), employees(first_name, last_name)')

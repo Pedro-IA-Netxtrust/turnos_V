@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { getActiveEmployees, type EmployeeLookup } from '../lib/crud/employees';
+import { getActiveEmployees, type EmployeeLookup } from '@/lib/crud/employees';
 
 interface Props {
   onSelect: (employee: EmployeeLookup | null) => void;
-  selectedId?: string;
+  selectedId?: string | undefined;
 }
 
 export const EmployeeSelector: React.FC<Props> = ({ onSelect, selectedId }) => {

@@ -1,0 +1,1 @@
+Updating engines.node to 24.x per Vercel requirement.

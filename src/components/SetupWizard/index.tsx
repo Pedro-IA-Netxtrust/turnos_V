@@ -96,7 +96,9 @@ export default function SetupWizard() {
     );
   }
 
-  const CurrentStepComponent = steps[currentStep].component;
+  const CurrentStepComponent = steps[currentStep]?.component as React.FC<any> | undefined;
+
+  if (!CurrentStepComponent) return null;
 
   return (
     <div className="setup-wizard">

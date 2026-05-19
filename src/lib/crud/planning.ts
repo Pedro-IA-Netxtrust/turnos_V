@@ -217,7 +217,7 @@ export async function getAreaActualHours(
   month: number,
 ): Promise<number> {
   const startDate = `${year}-${String(month).padStart(2, '0')}-01`;
-  const endDate = new Date(year, month, 0).toISOString().split('T')[0];
+  const endDate = new Date(year, month, 0).toISOString().slice(0, 10);
 
   const { data, error } = await supabase
     .from('planning_daily')
@@ -243,7 +243,7 @@ export async function getGlobalActualHours(
   month: number,
 ): Promise<number> {
   const startDate = `${year}-${String(month).padStart(2, '0')}-01`;
-  const endDate = new Date(year, month, 0).toISOString().split('T')[0];
+  const endDate = new Date(year, month, 0).toISOString().slice(0, 10);
 
   const { data, error } = await supabase
     .from('planning_daily')
