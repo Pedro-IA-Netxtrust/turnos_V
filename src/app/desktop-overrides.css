@@ -1,0 +1,67 @@
+/* Desktop specific overrides for wider screens */
+
+@media (min-width: 1024px) {
+  .landing-shell {
+    width: min(1400px, 100%);
+    padding: 48px 32px 96px;
+  }
+
+  .hero-body {
+    grid-template-columns: 1.25fr 1fr;
+    gap: 40px;
+  }
+
+  .hero-card {
+    min-height: 520px;
+  }
+
+  .hero-visual-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .service-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .dashboard-layout {
+    grid-template-columns: 2fr 1fr;
+    gap: 32px;
+  }
+
+  .status-cards, .status-grid {
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1280px) {
+  body {
+    font-size: 16px;
+  }
+
+  .landing-shell {
+    width: 1300px;
+    padding: 56px 40px 96px;
+  }
+
+  .hero-copy h2 {
+    font-size: clamp(2.25rem, 2.3vw, 3.75rem);
+  }
+}
+
+/* Minimalist premium desktop tweaks */
+@media (min-width: 1024px) {
+  .logo-badge { border-radius: 10px; width:40px; height:40px; font-size:20px }
+  .landing-shell { padding: 40px; }
+  .hero-panel { border-radius: 14px; padding: 28px; background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01)); }
+  .hero-copy h2 { font-weight: 700; letter-spacing: -0.02em; }
+  .metric-box { border-radius: 10px; padding: 18px }
+}
+
+/* Right panel behavior */
+.right-panel { position: relative; }
+
+/* Light theme overrides */
+[data-theme="light"] .hero-panel {
+  background: linear-gradient(180deg, rgba(0,0,0,0.02), rgba(0,0,0,0.01));
+}

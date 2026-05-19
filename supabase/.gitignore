@@ -1,0 +1,19 @@
+# Supabase local development
+.supabase/
+.env.local
+.env.*.local
+
+# Database
+*.sql.bak
+pg_dump.sql
+
+# Migrations backup
+migrations/backup/
+
+# Temp files
+.temp/
+*.tmp
+
+# OS
+.DS_Store
+Thumbs.db

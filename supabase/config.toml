@@ -1,0 +1,28 @@
+# Supabase project configuration
+# Documentation: https://supabase.com/docs/guides/cli
+
+[project]
+project_id = "valentina-asistencia-faena"
+project_ref = "valentina-asistencia-faena"
+
+[api]
+max_rows = 1000
+
+[db]
+# Configuración de base de datos PostgreSQL
+major_version = 15
+# ConnectionString: 'postgresql://postgres:[password]@[project_ref].supabase.co:6543/postgres'
+
+[auth]
+site_url = "http://localhost:3000"
+additional_redirect_urls = ["http://localhost:3000/auth/callback"]
+enable_signup = true
+enable_confirmations = false
+jwt_expiry = 3600
+jwt_secret = "your-jwt-secret-change-this"
+
+[realtime]
+max_bytes_per_second = 10000000
+
+[storage]
+max_file_size = 52428800
